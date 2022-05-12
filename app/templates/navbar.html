@@ -9,5 +9,7 @@
       <li><a href="{{url_for('auth.logout')}}" id="signout">Sign out</a></li>
       {% else %}
       <button class="btn-navbar"><a href="{{url_for('auth.login')}}">Sign in</a></button>
+      {%endif%}
+    </ul>
+</div>
       
-      {%endblock%}
