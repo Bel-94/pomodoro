@@ -12,6 +12,12 @@ def index():
     message = "Hello World" 
 
     return render_template('index.html', message=message)
+
+@main.route('/timer')
+@login_required
+def timer():
+    return render_template('timer.html')
+
 @main.route('/user/<uname>')
 def profile(uname):
     user = User.query.filter_by(username = uname).first()

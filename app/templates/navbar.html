@@ -3,12 +3,12 @@
      
      
       {% if current_user.is_authenticated %}
-      
-      <li><a href="{{url_for('main.profile',uname=current_user.username)}}" id="profile" >Profile</a></li>
+      <li><a href="/timer" style="color:white">TIMER</a></li>
+      <li><a href="{{url_for('main.profile',uname=current_user.username)}}" id="profile" style="color:white" >Profile</a></li>
       &nbsp;&nbsp;
-      <li><a href="{{url_for('auth.logout')}}" id="signout">Sign out</a></li>
+      <li><a href="{{url_for('auth.logout')}}" id="signout" style="color:white">Sign out</a></li>
       {% else %}
-      <button class="btn-navbar"><a href="{{url_for('auth.login')}}">Sign in</a></button>
+      <button class="btn-navbar"><a href="{{url_for('auth.login')}}" style="color:white">Sign in</a></button>
       {%endif%}
     </ul>
 </div>
